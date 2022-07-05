@@ -25,6 +25,13 @@ end
 group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rake', require: false
+  gem 'capistrano-rvm'
+  gem 'capistrano3-nginx', '~> 2.0'
+  gem 'capistrano3-puma'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
