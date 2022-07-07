@@ -5,6 +5,8 @@ import mailIcon from '../../assets/icons/Footer_mail.svg'
 import phoneIcon from '../../assets/icons/Footer_phone.svg'
 import monitorIcon from '../../assets/icons/Footer_monitor.svg'
 import api from '../../lib/api'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 export const Footer = () => {
   const [email, setEmail] = useState('')
@@ -23,15 +25,24 @@ export const Footer = () => {
 
     api.request.create(params)
       .then(() => {
-        console.log('Good!')
+        toast.success("Success!", {
+          hideProgressBar: true
+        })
       })
       .catch(() => {
-        console.log('Bad!')
+        toast.error("Something goes wrong!", {
+          hideProgressBar: true
+        })
+      })
+      .finally(() => {
+        setEmail('')
+        setName('')
       })
   }
 
   return (
     <div className={styles.container}>
+        <ToastContainer />
         <div className={styles.subtitle}>
             <h3>PRINCIPAL INVESTMENT SECURED.</h3>
             <h3 style={{ color: '#fff' }}>EQUITY PARTICIPATION FOR FREE.</h3>
