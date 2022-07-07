@@ -1,0 +1,38 @@
+.list_item{
+    display: flex;
+    /*align-items: center;*/
+    margin-bottom: 30px;
+}
+
+.list_item_text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.list_item_title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #072733;
+}
+
+.list_item_description{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.05em;
+    text-transform: uppercase;
+    color: #072733;
+}
+
+.ellipse{
+    margin-top: 5px;
+    min-width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    border: 3px solid #876726;
+    margin-right: 8px;
+}
