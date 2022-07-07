@@ -219,4 +219,4 @@ dist
 .pnp.*
 .idea
 
-/config/credentials/production.key
+#/config/credentials/production.key
