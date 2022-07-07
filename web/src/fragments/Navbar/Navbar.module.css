@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    height: 110px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(268.85deg, #9D7D3B 28.99%, #876726 69.74%);
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    margin-left: 270px;
+    width: 180px;
+    height: 200px;
+    background-color: #072733;
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 50% 95%, 0% 100%);
+    margin-top: 47px;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo_img{
+    width: 110px;
+}
+
+.navigation{
+    margin-right: 160px;
+    color: #fff;
+    display: flex;
+    gap: 8.5rem;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    z-index: 999;
+}
+
+.nav_item{
+    cursor: pointer;
+}
