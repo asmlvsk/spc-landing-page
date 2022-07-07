@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.17.0"
 
-set :application,             'scp'
+set :application,             'spc'
 set :user,                    'deploy'
 set :stages,                  %w(production)
 set :repo_url,                'git@github.com:asmlvsk/spc-landing-page.git'
@@ -25,6 +25,7 @@ set :puma_worker_timeout,     nil
 set :puma_init_active_record, true
 set :puma_preload_app,        false
 set :bundle_without,          %w{test}
+set :puma_phased_restart,     false
 
 set :nginx_service_path,        '/etc/init.d/nginx'
 set :nginx_log_path,            "#{shared_path}/log"

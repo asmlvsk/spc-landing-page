@@ -8,6 +8,7 @@ require 'capistrano/rvm'
 require 'capistrano/rails'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
+install_plugin Capistrano::Puma::Systemd
 require 'capistrano/nginx'
 
 set :rvm_type, :user
