@@ -8,10 +8,10 @@ export const Navbar = () => {
         <div className={styles.logo}>
             <img className={styles.logo_img} src={logo} alt="Logo" />
         </div>
-        
+
         <div className={styles.navigation}>
             <div className={styles.nav_item}>HOME</div>
-            <div className={styles.nav_item}>INVEST NOW</div>
+            <a href='#footer' className={styles.nav_item}>INVEST NOW</a>
         </div>
     </nav>
   )

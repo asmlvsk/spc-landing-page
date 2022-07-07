@@ -73,7 +73,7 @@ export const Footer = () => {
             </div>
 
         </div>
-        <div className={styles.end_section}>
+        <div className={styles.end_section} id='footer'>
             <div className={styles.end_section_content}>
                 <div className={styles.end_section_logo}>
                     <img className={styles.logo_img} src={logo} alt="Logo" />
