@@ -5,6 +5,7 @@ set :application,             'scp'
 set :user,                    'deploy'
 set :stages,                  %w(production)
 set :repo_url,                'git@github.com:asmlvsk/spc-landing-page.git'
+set :branch,                  :main
 set :app_path,                "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :deploy_to,               "#{fetch(:app_path)}/"
 set :linked_files,            ["config/credentials/master.key",'.env']
