@@ -8,7 +8,7 @@ set :repo_url,                'git@github.com:asmlvsk/spc-landing-page.git'
 set :branch,                  :main
 set :app_path,                "/home/#{fetch(:user)}/apps/#{fetch(:application)}"
 set :deploy_to,               "#{fetch(:app_path)}/"
-set :linked_files,            ["config/master.key",'.env']
+set :linked_files,            %w[.env config/master.key]
 set :linked_dirs,             %w{log tmp/pids tmp/cache tmp/sockets vendor/bundle storage public/system public/uploads public/assets bundle node_modules}
 set :pty,                     true
 set :puma_rackup,             -> { File.join(current_path, 'config.ru') }
