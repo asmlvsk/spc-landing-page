@@ -1,11 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Footer.module.css'
 import logo from '../../assets/President_Club_logo.svg'
 import mailIcon from '../../assets/icons/Footer_mail.svg'
 import phoneIcon from '../../assets/icons/Footer_phone.svg'
 import monitorIcon from '../../assets/icons/Footer_monitor.svg'
+import api from '../../lib/api'
 
 export const Footer = () => {
+  const [email, setEmail] = useState('')
+  const [name, setName] = useState('')
+
+  const onNameChange = (e) => {
+    setName(e.target.value)
+  }
+
+  const onEmailChange = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const onSubmit = () => {
+    const params = { name: name, email: email }
+
+    api.request.create(params)
+      .then(() => {
+        console.log('Good!')
+      })
+      .catch(() => {
+        console.log('Bad!')
+      })
+  }
+
   return (
     <div className={styles.container}>
         <div className={styles.subtitle}>
@@ -18,11 +42,21 @@ export const Footer = () => {
                     Get Your FREE Investor Kit
                 </div>
                 <div className={styles.actions}>
-                    <input placeholder='Your full name' className={styles.contact_input}/>
-                    <input placeholder='Your email'  className={styles.contact_input}/>
+                    <input
+                      placeholder='Your full name'
+                      className={styles.contact_input}
+                      name='name'
+                      value={name}
+                      onChange={onNameChange}/>
+                    <input
+                      placeholder='Your email'
+                      className={styles.contact_input}
+                      name='email'
+                      value={email}
+                      onChange={onEmailChange}/>
                     <div className={styles.contact_buttons}>
-                        <button className={styles.contact_button}>GET YOUR KIT NOW</button>
-                        <button className={styles.contact_button}>INVEST NOW</button>
+                        <button className={styles.contact_button} onClick={onSubmit}>GET YOUR KIT NOW</button>
+                        <button className={styles.contact_button} onClick={onSubmit}>INVEST NOW</button>
                     </div>
                 </div>
             </div>
