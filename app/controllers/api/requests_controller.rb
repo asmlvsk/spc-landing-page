@@ -13,6 +13,6 @@ class Api::RequestsController < ApiController
   private
 
   def requests_params
-    params.require(:request).permit(:email, :name)
+    params.require(:request).permit(:email, :name, :accredited_investor)
   end
 end

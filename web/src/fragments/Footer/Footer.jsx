@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css'
 export const Footer = () => {
   const [email, setEmail] = useState('')
   const [name, setName] = useState('')
+  const [isInvestor, setIsInvestor] = useState(false)
 
   const onNameChange = (e) => {
     setName(e.target.value)
@@ -20,8 +21,12 @@ export const Footer = () => {
     setEmail(e.target.value)
   }
 
+  const onInvestorChange = (e) => {
+    setIsInvestor(e.target.value)
+  }
+
   const onSubmit = () => {
-    const params = { name: name, email: email }
+    const params = { name: name, email: email, accredited_investor: isInvestor }
 
     api.request.create(params)
       .then(() => {
@@ -65,6 +70,14 @@ export const Footer = () => {
                       name='email'
                       value={email}
                       onChange={onEmailChange}/>
+                    <label className={styles.checkbox_container}>
+                        <input 
+                        type="checkbox"
+                        value={isInvestor}
+                        onChange={onInvestorChange}
+                        className={styles.checkbox} />
+                        <span class="checkmark" className={styles.checkbox_text} >I am an Accredited Investor</span>
+                    </label>
                     <div className={styles.contact_buttons}>
                         <button className={styles.contact_button} onClick={onSubmit}>GET YOUR KIT NOW</button>
                         <button className={styles.contact_button} onClick={onSubmit}>INVEST NOW</button>
