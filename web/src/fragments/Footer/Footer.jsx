@@ -22,7 +22,7 @@ export const Footer = () => {
   }
 
   const onInvestorChange = (e) => {
-    setIsInvestor(e.target.value)
+    setIsInvestor(e.target.checked)
   }
 
   const onSubmit = () => {
@@ -42,6 +42,7 @@ export const Footer = () => {
       .finally(() => {
         setEmail('')
         setName('')
+        setIsInvestor(false)
       })
   }
 
