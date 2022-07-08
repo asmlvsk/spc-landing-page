@@ -5,7 +5,7 @@ ActiveAdmin.register Request do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
-  permit_params :email, :name
+  permit_params :email, :name, :accredited_investor
   #
   # or
   #
