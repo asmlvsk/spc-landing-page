@@ -18,10 +18,11 @@
 }
 
 .section_header{
-    width: 1370px;
+    max-width: 1370px;
     text-align: center;
     margin: 0 auto;
     margin-top: 190px;
+    margin-bottom: 120px;
 }
 
 .section_body{
@@ -30,8 +31,10 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    margin-top: 5%;
-    height: 50%;
+    /*height: 50%;*/
+    padding-bottom: 70px;
+    margin: 0 auto;
+    max-width: 1600px;
 }
 
 .section_title{

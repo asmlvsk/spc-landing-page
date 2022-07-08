@@ -34,13 +34,11 @@ export const Profits = () => {
                 </div>
 
                 <div className={styles.center_side}>
-                    <div className={styles.center_body}>
-                        <img className={styles.center_obj} src={profits_obj_center} alt="Background" />
-                        <h4 className={styles.center_title}>Limited Availability</h4>
-                        <p className={styles.center_text}>
-                            Only 35 Units
-                        </p>
-                    </div>
+                    <img className={styles.center_obj} src={profits_obj_center} alt="Background" />
+                    <h4 className={styles.center_title}>Limited Availability</h4>
+                    <p className={styles.center_text}>
+                        Only 35 Units
+                    </p>
                 </div>
 
                 <div className={styles.bottom_side}>
