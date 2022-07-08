@@ -11,78 +11,81 @@ export const AssetsSection = () => {
     <div className={styles.container}>
         <div className={styles.title}>SGA has significant assets and is ready to go:</div>
         <div className={styles.background}>
-            <div className={styles.items}>
+            <div className={styles.background_container}>
+                <div className={styles.items}>
 
-                <div className={styles.diamond}>
-                    <div className={styles.diamond_item}>
-                        <div className={styles.diamond_item_body}>
-                            <img src={facilityIcon} alt="Facility" />
+                    <div className={styles.diamond}>
+                        <div className={styles.diamond_item}>
+                            <div className={styles.diamond_item_body}>
+                                <img src={facilityIcon} alt="Facility" />
+                            </div>
+                        </div>
+                        <div className={styles.diamond_text}>
+                            <h4>100,000 sq.ft. federally</h4>
+                            <p className={styles.bottom_diamond_sub_title}>licensed indoor facility.</p>
                         </div>
                     </div>
-                    <div className={styles.diamond_text}>
-                        <h4>100,000 sq.ft. federally</h4>
-                        <p className={styles.bottom_diamond_sub_title}>licensed indoor facility.</p>
+
+                    <div className={styles.diamond}>
+                        <div className={styles.diamond_item}>
+                            <div className={styles.diamond_item_body}>
+                                <img src={productsIcon} alt="Products" />
+                            </div>
+                        </div>
+                        <div className={styles.diamond_text}>
+                            <h4>Products </h4>
+                            <p className={styles.bottom_diamond_sub_title}>Customers Want</p>
+                            <h4>Services </h4>
+                            <p className={styles.bottom_diamond_sub_title}>Companies Need</p>
+                        </div>
+                    </div>
+
+                    <div className={styles.diamond}>
+                        <div className={styles.diamond_item}>
+                            <div className={styles.diamond_item_body}>
+                                <img src={contractsIcon} alt="Contracts" />
+                            </div>
+                        </div>
+                        <div className={styles.diamond_text}>
+                            <h4>3rd Party contracts in hand</h4>
+                            <p className={styles.bottom_diamond_sub_title}>
+                                for baked goods, chocolates, coffee & tea, 
+                                as well as sugars & confectionaries.
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <div className={styles.bottom_items}>
 
-                <div className={styles.diamond}>
-                    <div className={styles.diamond_item}>
-                        <div className={styles.diamond_item_body}>
-                            <img src={productsIcon} alt="Products" />
+                    <div className={styles.diamond_yellow}>
+                        <div className={styles.bottom_diamond_item}>
+                            <div className={styles.bottom_diamond_item_body}>
+                                <img src={leadersIcon} alt="Leaders" />
+                            </div>
+                        </div>
+                        <div className={styles.bottom_diamond_text}>
+                            <h4>Experienced leaders</h4>
+                            <p className={styles.bottom_diamond_sub_title}>with Apple, Cadbury, P&G, Mars and NASDAQ.</p>
                         </div>
                     </div>
-                    <div className={styles.diamond_text}>
-                        <h4>Products </h4>
-                        <p className={styles.bottom_diamond_sub_title}>Customers Want</p>
-                        <h4>Services </h4>
-                        <p className={styles.bottom_diamond_sub_title}>Companies Need</p>
-                    </div>
-                </div>
 
-                <div className={styles.diamond}>
-                    <div className={styles.diamond_item}>
-                        <div className={styles.diamond_item_body}>
-                            <img src={contractsIcon} alt="Contracts" />
+                    <div className={styles.diamond_yellow}>
+                        <div className={styles.bottom_diamond_item}>
+                            <div className={styles.bottom_diamond_item_body}>
+                                <img src={techsIcon} alt="Techs" />
+                            </div>
                         </div>
-                    </div>
-                    <div className={styles.diamond_text}>
-                        <h4>3rd Party contracts in hand</h4>
-                        <p className={styles.bottom_diamond_sub_title}>
-                            for baked goods, chocolates, coffee & tea, 
-                            as well as sugars & confectionaries.
-                        </p>
+                        <div className={styles.bottom_diamond_text}>
+                            <h4>Licensed Technologies</h4>
+                            <p className={styles.bottom_diamond_sub_title}>
+                                Patent pending transdermal cream. Patented 
+                                nano-emulsion 3x faster onset and 2x absorption.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div className={styles.bottom_items}>
 
-                <div className={styles.diamond_yellow}>
-                    <div className={styles.bottom_diamond_item}>
-                        <div className={styles.bottom_diamond_item_body}>
-                            <img src={leadersIcon} alt="Leaders" />
-                        </div>
-                    </div>
-                    <div className={styles.bottom_diamond_text}>
-                        <h4>Experienced leaders</h4>
-                        <p className={styles.bottom_diamond_sub_title}>with Apple, Cadbury, P&G, Mars and NASDAQ.</p>
-                    </div>
-                </div>
-
-                <div className={styles.diamond_yellow}>
-                    <div className={styles.bottom_diamond_item}>
-                        <div className={styles.bottom_diamond_item_body}>
-                            <img src={techsIcon} alt="Techs" />
-                        </div>
-                    </div>
-                    <div className={styles.bottom_diamond_text}>
-                        <h4>Licensed Technologies</h4>
-                        <p className={styles.bottom_diamond_sub_title}>
-                            Patent pending transdermal cream. Patented 
-                            nano-emulsion 3x faster onset and 2x absorption.
-                        </p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
   )
