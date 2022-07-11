@@ -58,3 +58,9 @@
     text-transform: uppercase;
     color: #072733;
 }
+
+@media screen and (max-height: 900px) {
+  .fragment {
+    height: 1000px;
+  }
+}
