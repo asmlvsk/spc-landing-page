@@ -1,28 +1,23 @@
 .container{
-    display: flex;
     width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
-    height: 1410px;
-    position: relative;
-    flex-direction: column;
-    /*justify-content: flex-end;*/
 }
 
-.background{
-    position: relative;
+.fragment{
+    width: 100%;
+    height: 100vh;
     background: linear-gradient(to bottom, white, transparent),
     url(../../assets/equity_bg.svg);
     background-size: cover;
-    width: 100%;
-    height: 100%;
 }
 
 .section_header{
     max-width: 1370px;
     text-align: center;
     margin: 0 auto;
-    margin-top: 190px;
-    margin-bottom: 120px;
+    padding-top: 90px;
+    padding-bottom: 90px;
 }
 
 .section_body{

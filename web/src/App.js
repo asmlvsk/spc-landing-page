@@ -11,7 +11,7 @@ import { Helmet } from 'react-helmet'
 
 function App() {
   return (
-    <div className="container">
+    <div>
         <Helmet>
           <title>{ 'Sophia\'s Presidents Club' }</title>
         </Helmet>

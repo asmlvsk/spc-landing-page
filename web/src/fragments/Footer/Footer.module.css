@@ -1,9 +1,9 @@
-.container{
+/*.container{
     display: flex;
     width: 100%;
     flex-direction: column;
     margin: 0 auto;
-}
+}*/
 
 .subtitle{
     height: 200px;
