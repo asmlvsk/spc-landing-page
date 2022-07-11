@@ -8,16 +8,15 @@ import techsIcon from '../../assets/icons/14_techs.svg'
 
 export const AssetsSection = () => {
   return (
-    <div className={styles.container}>
-        <div className={styles.title}>SGA has significant assets and is ready to go:</div>
-        <div className={styles.background}>
-            <div className={styles.background_container}>
+    <div className={styles.fragment}>
+        <div className={styles.container}>
+            <div className={styles.title}>SGA has significant assets and is ready to go:</div>
                 <div className={styles.items}>
 
                     <div className={styles.diamond}>
                         <div className={styles.diamond_item}>
                             <div className={styles.diamond_item_body}>
-                                <img src={facilityIcon} alt="Facility" />
+                                <img className={styles.icon} src={facilityIcon} alt="Facility" />
                             </div>
                         </div>
                         <div className={styles.diamond_text}>
@@ -29,7 +28,7 @@ export const AssetsSection = () => {
                     <div className={styles.diamond}>
                         <div className={styles.diamond_item}>
                             <div className={styles.diamond_item_body}>
-                                <img src={productsIcon} alt="Products" />
+                                <img className={styles.icon} src={productsIcon} alt="Products" />
                             </div>
                         </div>
                         <div className={styles.diamond_text}>
@@ -43,7 +42,7 @@ export const AssetsSection = () => {
                     <div className={styles.diamond}>
                         <div className={styles.diamond_item}>
                             <div className={styles.diamond_item_body}>
-                                <img src={contractsIcon} alt="Contracts" />
+                                <img className={styles.icon} src={contractsIcon} alt="Contracts" />
                             </div>
                         </div>
                         <div className={styles.diamond_text}>
@@ -60,7 +59,7 @@ export const AssetsSection = () => {
                     <div className={styles.diamond_yellow}>
                         <div className={styles.bottom_diamond_item}>
                             <div className={styles.bottom_diamond_item_body}>
-                                <img src={leadersIcon} alt="Leaders" />
+                                <img className={styles.icon} src={leadersIcon} alt="Leaders" />
                             </div>
                         </div>
                         <div className={styles.bottom_diamond_text}>
@@ -72,20 +71,19 @@ export const AssetsSection = () => {
                     <div className={styles.diamond_yellow}>
                         <div className={styles.bottom_diamond_item}>
                             <div className={styles.bottom_diamond_item_body}>
-                                <img src={techsIcon} alt="Techs" />
+                                <img className={styles.icon} src={techsIcon} alt="Techs" />
                             </div>
                         </div>
                         <div className={styles.bottom_diamond_text}>
-                            <h4>Licensed Technologies</h4>
+                            <h4>Licensed <br/>Technologies</h4>
                             <p className={styles.bottom_diamond_sub_title}>
                                 Patent pending transdermal cream. Patented 
                                 nano-emulsion 3x faster onset and 2x absorption.
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
 
+            </div>
         </div>
     </div>
   )
