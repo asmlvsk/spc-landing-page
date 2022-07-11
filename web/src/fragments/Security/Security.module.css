@@ -156,3 +156,9 @@
     display: flex;
     align-items: center;
 }
+
+@media screen and (max-height: 900px) {
+  .fragment {
+    height: 1000px;
+  }
+}

@@ -41,10 +41,10 @@
     background: #876726;
 }
 
-.background{
+/*.background{
     height: 100%;
     max-width: 100%;
-}
+}*/
 
 .background_container{
     position: relative;
@@ -273,4 +273,10 @@
 
     text-align: center;
     color: #FFFFFF;
+}
+
+@media screen and (max-height: 900px) {
+  .fragment {
+    height: 1000px;
+  }
 }
