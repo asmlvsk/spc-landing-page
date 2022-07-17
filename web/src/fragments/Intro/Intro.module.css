@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 3rem;
 }
 
 .fragment{
@@ -57,6 +58,7 @@
     justify-content: center;
     align-items: center;
     background: #072733;
+    padding: 3rem;
 }
 
 .introduction_title{
@@ -81,4 +83,88 @@
     height: 0px;
     border: 1px solid rgba(255, 255, 255, 0.25);
     transform: rotate(90deg);
+}
+
+@media screen and (max-width: 1180px) {
+    .title{
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .introduction_title{
+        font-size: 30px;
+        line-height: 44px;
+    }
+    .introduction_underTitle{
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .introduction{
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .divider{
+        transform: none;
+    }
+    .title{
+        font-size: 30px;
+        line-height: 45px;
+    }
+    .introduction_title{
+        width: auto;
+        text-align: center;
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .introduction_underTitle{
+        width: auto;
+        text-align: center;
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .buttons{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .title{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .button{
+        width: 200px;
+        height: 36px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .fragment {
+        padding-top: 175px;
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .introduction{
+        height: auto;
+    }
+    .title{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .introduction_title{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .introduction_underTitle{
+        font-size: 12px;
+        line-height: 20px;
+    }
 }

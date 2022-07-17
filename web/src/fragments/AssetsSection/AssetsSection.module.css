@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 3rem;
 }
 
 .fragment{
@@ -13,6 +14,12 @@
     background-repeat: no-repeat;
     margin-bottom: 10px;
     padding: 0 3rem;
+}
+
+.section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .icon{
@@ -121,7 +128,8 @@
     align-items: center;
 }
 
-.items{
+.items,
+.bottom_items{
     width: 100%;
     display: flex;
     margin-top: 10%;
@@ -132,11 +140,6 @@
 
 .bottom_items{
     margin-top: -5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 10rem;
-    margin-right: 150px;
 }
 
 .bottom_diamond_item{
@@ -152,4 +155,195 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-height: 900px) {
+  .fragment {
+    height: 1000px;
+  }
+}
+
+@media screen and (max-width: 1390px) {
+    .diamond_item{
+        width: 90px;
+        height: 90px
+    }
+    .diamond_item_body{
+        width: 70px;
+        height: 70px
+    }
+    .icon{
+        width: min(90%, 40px)
+    }
+    .bottom_diamond_item{
+        width: 90px;
+        height: 90px
+    }
+    .bottom_diamond_item_body{
+        width: 70px;
+        height: 70px
+    }
+    .icon{
+        width: min(90%, 40px)
+    }
+    .diamond{
+        width: min(90%, 230px);
+    }
+    .diamond_yellow{
+        width: min(90%, 230px);
+    }
+    .diamond_text{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .bottom_diamond_text{
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .bottom_diamond_sub_title{
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .diamond_item{
+        width: 90px;
+        height: 90px
+    }
+    .diamond_item_body{
+        width: 70px;
+        height: 70px
+    }
+    .icon{
+        width: min(90%, 40px)
+    }
+    .diamond{
+        width: min(90%, 210px);
+    }
+    .diamond_yellow{
+        width: min(90%, 210px);
+    }
+    .diamond_text{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .bottom_diamond_text{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .bottom_diamond_sub_title{
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1198px) {
+  .fragment {
+    height: auto;
+  }
+  .section{
+    display: flex;
+    flex-direction: row;
+    padding-left: 30%;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+  .items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+    justify-content: center;
+    gap: 10rem;
+  }
+  .bottom_items{
+    margin-left: -40%;
+    margin-top: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10rem;
+  }
+  .bottom_diamond_item,
+  .diamond_item{
+    margin-top: 180px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+    .diamond{
+        width: 210px;
+    }
+    .diamond_yellow{
+        width: 210px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .bottom_diamond_item,
+    .diamond_item{
+        margin-top: -60px;
+    }
+    .diamond{
+        width: 170px;
+    }
+    .diamond_yellow{
+        width: 170px;
+    }
+    .diamond_text{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .bottom_diamond_text{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .bottom_diamond_sub_title{
+        font-size: 16px;
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title{
+        font-size: 24px;
+        line-height: 30px;
+    }
+    .section{
+        max-width: 500px;
+        padding-bottom: 50%;
+        padding-left: 0;
+        padding-top: 20%;
+    }
+    .bottom_items{
+        margin-left: -130%;
+    }
+    .diamond,
+    .diamond_yellow{
+        transform: none;
+        width: 150px;
+    }
+    .diamond_text,
+    .bottom_diamond_text{
+        width: 135px;
+        transform: none;
+        font-size: 16px;
+    }
+    .bottom_diamond_sub_title{
+        width: 157px;
+        font-size: 14px;
+        line-height: 15px;
+    }
+    .diamond_item,
+    .bottom_diamond_item{
+        transform: none;
+        margin-top: -4.5em;
+        margin-left: 2rem;
+    }
+    .items,
+    .bottom_items {
+        margin: 0;
+    }
 }
