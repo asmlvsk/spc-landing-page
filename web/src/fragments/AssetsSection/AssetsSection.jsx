@@ -11,6 +11,7 @@ export const AssetsSection = () => {
     <div className={styles.fragment}>
         <div className={styles.container}>
             <div className={styles.title}>SGA has significant assets and is ready to go:</div>
+            <div className={styles.section}>
                 <div className={styles.items}>
 
                     <div className={styles.diamond}>
@@ -82,8 +83,9 @@ export const AssetsSection = () => {
                             </p>
                         </div>
                     </div>
-
+                </div>
             </div>
+
         </div>
     </div>
   )

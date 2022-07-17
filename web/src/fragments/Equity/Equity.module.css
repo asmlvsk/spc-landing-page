@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 3rem;
 }
 
 .fragment{
@@ -26,7 +27,6 @@
     justify-content: center;
     align-items: center;
     gap: 3rem;
-    /*height: 50%;*/
     padding-bottom: 70px;
     margin: 0 auto;
     max-width: 1600px;
@@ -62,5 +62,32 @@
 @media screen and (max-height: 900px) {
   .fragment {
     height: 1000px;
+  }
+}
+
+@media screen and (max-width: 1198px) {
+  .fragment {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section_header{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .section_title {
+    font-size: 30px;
+  }
+  .section_sub_title {
+    line-height: 30px;
+    font-size: 18px;
+  }
+  .section_description{
+    line-height: 30px;
+    font-size: 18px;
+  }
+  .section_body{
+    gap: 2rem;
   }
 }

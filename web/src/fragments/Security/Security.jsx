@@ -1,24 +1,27 @@
 import React, { useRef } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation } from 'swiper'
+import Slider from "react-slick";
 import { SecurityListItem } from '../../components/SecurityListItem/SecurityListItem'
 import { SecurityPictureItem } from '../../components/SecurityPictureItem/SecurityPictureItem'
 import { carouselPictures, highlightsData } from '../../data/security_page_data'
 import styles from './Security.module.css'
-
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 import arrow from '../../assets/Arrow.svg'
 
-import 'swiper/css';
-import 'swiper/css/navigation'
-
 export const Security = () => {
+
+    const settings = {
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    };
 
     const swiperNavPrevRef = useRef(null)
     const swiperNavNextRef = useRef(null)
-
-    const secondSwiperNavPrevRef = useRef(null)
-    const secondSwiperNavNextRef = useRef(null)
+    const sliderRef = useRef(null)
+    const secondSliderRef = useRef(null)
 
   return (
     <div className={styles.fragment}>
@@ -42,38 +45,23 @@ export const Security = () => {
                         <div>
                             <div className={styles.carousel_title}>Interior</div>
                             <div className={styles.carousel_body}>
-                                <div className={styles.arrow_left_bg} ref={swiperNavPrevRef}>
+                                <div className={styles.arrow_left_bg} 
+                                    ref={swiperNavPrevRef} 
+                                    onClick={() => sliderRef.current.slickPrev()}>
                                     <img className={styles.arrow} src={arrow} alt="Arrow" />
                                 </div>
                                 <div className={styles.carousel}>
-                                    <Swiper
-                                        modules={[Navigation]}
-                                        slidesPerView={1}
-                                        grabCursor
-                                        loop
-                                        className={styles.slider}
-                                        spaceBetween={0}
-                                        navigation={{
-                                            prevEl: swiperNavPrevRef.current,
-                                            nextEl: swiperNavNextRef.current
-                                        }}
-                                        onInit={(swiper) => {
-                                            swiper.params.navigation.prevEl = swiperNavPrevRef.current
-                                            swiper.params.navigation.nextEl = swiperNavNextRef.current
-                                            swiper.navigation.init()
-                                            swiper.navigation.update()
-                                        }}
-                                    >
-                                    {carouselPictures.interior.map((picture, index) => (
-                                        <SwiperSlide>
+                                    <Slider arrows={false} ref={sliderRef} {...settings}>
+                                        {carouselPictures.interior.map((picture, index) => (
                                             <div key={index} className={styles.pictures}>
                                                 <SecurityPictureItem src={picture.original} title={picture.title} />
                                             </div>
-                                        </SwiperSlide>
-                                    ))}
-                                    </Swiper>
+                                        ))}
+                                    </Slider>
                                 </div>
-                                <div className={styles.arrow_right_bg} ref={swiperNavNextRef}>
+                                <div className={styles.arrow_right_bg} 
+                                    ref={swiperNavNextRef} 
+                                    onClick={() => sliderRef.current.slickNext()}>
                                     <img className={styles.arrow} src={arrow} alt="Arrow" />
                                 </div>
                             </div>
@@ -83,42 +71,19 @@ export const Security = () => {
                         <div>
                             <div className={styles.carousel_title}>Exterior</div>
                             <div className={styles.carousel_body}>
-                                <div className={styles.arrow_left_bg} ref={secondSwiperNavPrevRef}>
+                                <div className={styles.arrow_left_bg} onClick={() => secondSliderRef.current.slickPrev()}>
                                     <img className={styles.arrow} src={arrow} alt="Arrow" />
                                 </div>
                                 <div className={styles.carousel}>
-                                    <Swiper
-                                        modules={[Navigation]}
-                                        slidesPerView={1}
-                                        grabCursor
-                                        loop
-                                        className={styles.slider}
-                                        spaceBetween={0}
-                                        navigation={{
-                                            prevEl: secondSwiperNavPrevRef.current,
-                                            nextEl: secondSwiperNavNextRef.current
-                                        }}
-                                        onInit={(swiper) => {
-                                            swiper.params.navigation.prevEl = secondSwiperNavPrevRef.current
-                                            swiper.params.navigation.nextEl = secondSwiperNavNextRef.current
-                                            swiper.navigation.init()
-                                            swiper.navigation.update()
-                                        }}
-                                    >
-                                    {carouselPictures.exterior.map((picture, index) => (
-                                        <SwiperSlide>
+                                    <Slider arrows={false} ref={secondSliderRef} {...settings}>
+                                        {carouselPictures.exterior.map((picture, index) => (
                                             <div key={index} className={styles.pictures}>
                                                 <SecurityPictureItem src={picture.original} title={picture.title} />
                                             </div>
-                                        </SwiperSlide>
-                                    ))}
-
-
-
-                                </Swiper>
-
+                                        ))}
+                                    </Slider>
                                 </div>
-                                <div className={styles.arrow_right_bg} ref={secondSwiperNavNextRef}>
+                                <div className={styles.arrow_right_bg} onClick={() => secondSliderRef.current.slickNext()}>
                                     <img className={styles.arrow} src={arrow} alt="Arrow" />
                                 </div>
 

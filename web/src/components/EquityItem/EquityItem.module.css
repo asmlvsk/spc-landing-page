@@ -1,7 +1,7 @@
 .item{
-    width: 360px;
-    padding: 20px;
-    height: 120px;
+    max-width: 330px;
+    padding: 35px;
+    max-height: 110px;
     background: rgba(7, 39, 51, 0.8);
     opacity: 0.8;
     display: flex;

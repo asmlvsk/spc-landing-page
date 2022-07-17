@@ -1,12 +1,11 @@
-/*.image{
-    max-width: 100%;
-}*/
-
 .picture{
     position: relative;
     display: flex;
     align-items: flex-end;
-    width: 435px;
+}
+
+.image{
+    width: 100% !important;
 }
 
 .title_bg{
@@ -17,7 +16,7 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 99%;
     height: 40px;
     background: rgba(7, 39, 51, 0.6);
     backdrop-filter: blur(10px);
@@ -27,9 +26,6 @@
     font-weight: 300;
     font-size: 15px;
     line-height: 58px;
-    /* identical to box height, or 483% */
-
     text-transform: uppercase;
-
     color: #FFFFFF;
 }
