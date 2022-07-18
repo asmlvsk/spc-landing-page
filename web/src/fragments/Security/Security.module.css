@@ -228,10 +228,7 @@
     .carousel{
         width: 100%;
     }
-}
-
-@media screen and (max-height: 900px) {
-  .fragment {
-    height: 1000px;
-  }
+    .fragment {
+        height: auto;
+    }
 }
