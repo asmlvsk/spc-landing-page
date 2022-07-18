@@ -13,8 +13,8 @@
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
-    padding-top: 300px;
-    padding-bottom: 200px;
+    display: flex;
+    align-items: center;
 }
 
 .title{
@@ -23,12 +23,11 @@
     font-size: 45px;
     line-height: 65px;
     text-align: center;
-    padding: 0 3rem;
 }
 
 .buttons{
     display: flex;
-    padding: 3rem;
+    padding-top: 3rem;
     justify-content: center;
     gap: 5.0rem;
 }
@@ -125,29 +124,19 @@
         line-height: 22px;
     }
     .buttons{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 2rem;
     }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 500px) {
     .title{
-        font-size: 20px;
+        font-size: 24px;
         line-height: 32px;
     }
     .button{
         width: 200px;
         height: 36px;
         font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .fragment {
-        padding-top: 175px;
-        padding-bottom: 0;
     }
 }
 

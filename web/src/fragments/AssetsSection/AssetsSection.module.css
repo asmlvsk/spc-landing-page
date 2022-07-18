@@ -2,7 +2,6 @@
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 3rem;
 }
 
 .fragment{
@@ -323,7 +322,7 @@
     .diamond,
     .diamond_yellow{
         transform: none;
-        width: 150px;
+        width: 160px;
     }
     .diamond_text,
     .bottom_diamond_text{
@@ -335,6 +334,7 @@
         width: 157px;
         font-size: 14px;
         line-height: 15px;
+        padding: 0 5px;
     }
     .diamond_item,
     .bottom_diamond_item{
