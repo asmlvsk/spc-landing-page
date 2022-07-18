@@ -6,27 +6,15 @@ import phoneIcon from '../../assets/icons/Footer_phone.svg'
 import monitorIcon from '../../assets/icons/Footer_monitor.svg'
 import api from '../../lib/api'
 import { ToastContainer, toast } from 'react-toastify'
+import { useForm } from "react-hook-form";
 import 'react-toastify/dist/ReactToastify.css'
 
 export const Footer = () => {
-  const [email, setEmail] = useState('')
-  const [name, setName] = useState('')
-  const [isInvestor, setIsInvestor] = useState(false)
+  const { register, handleSubmit, reset, formState: { errors } } = useForm();
 
-  const onNameChange = (e) => {
-    setName(e.target.value)
-  }
-
-  const onEmailChange = (e) => {
-    setEmail(e.target.value)
-  }
-
-  const onInvestorChange = (e) => {
-    setIsInvestor(e.target.checked)
-  }
-
-  const onSubmit = () => {
-    const params = { name: name, email: email, accredited_investor: isInvestor }
+  const onSubmit = (data) => {
+    console.log(data);
+    const params = data;
 
     api.request.create(params)
       .then(() => {
@@ -40,9 +28,7 @@ export const Footer = () => {
         })
       })
       .finally(() => {
-        setEmail('')
-        setName('')
-        setIsInvestor(false)
+        reset({ name: '', email: '', accredited_investor: false })
       })
   }
 
@@ -59,32 +45,37 @@ export const Footer = () => {
                         <div  className={styles.contact_section_title}>
                             Get Your FREE Investor Kit
                         </div>
-                        <div className={styles.actions}>
+                        <form onSubmit={handleSubmit(onSubmit)} className={styles.actions}>
                             <input
-                            placeholder='Your full name'
-                            className={styles.contact_input}
-                            name='name'
-                            value={name}
-                            onChange={onNameChange}/>
+                                placeholder='Your full name'
+                                className={styles.contact_input}
+                                name='name'
+                                {...register('name', { pattern: /^[A-Za-z]+$/i, required: true})}
+                            />
+                            {errors?.name?.type === "pattern" ?
+                                <p className={styles.error}>Alphabetical characters only</p> : errors?.name?.type === "required" ?
+                                <p className={styles.error}>Field is required</p> : null}
                             <input
-                            placeholder='Your email'
-                            className={styles.contact_input}
-                            name='email'
-                            value={email}
-                            onChange={onEmailChange}/>
+                                placeholder='Your email'
+                                className={styles.contact_input}
+                                name='email'
+                                {...register('email', { pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, required: true})}
+                            />
+                            {errors?.email?.type === "pattern" ? 
+                            <p className={styles.error}>Email is invalid</p> : errors?.email?.type === "required" ?
+                            <p className={styles.error}>Field is required</p> : null}
                             <label className={styles.checkbox_container}>
                                 <input 
                                 type="checkbox"
-                                value={isInvestor}
-                                onChange={onInvestorChange}
+                                {...register('accredited_investor')}
                                 className={styles.checkbox} />
                                 <span class="checkmark" className={styles.checkbox_text} >I am an Accredited Investor</span>
                             </label>
                             <div className={styles.contact_buttons}>
-                                <button className={styles.contact_button} onClick={onSubmit}>GET YOUR KIT NOW</button>
-                                <button className={styles.contact_button} onClick={onSubmit}>INVEST NOW</button>
+                                <button className={styles.contact_button} type='submit'>GET YOUR KIT NOW</button>
+                                <button className={styles.contact_button} type='submit'>INVEST NOW</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
 
                 </div>
