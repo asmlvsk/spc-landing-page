@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './Profits.module.css'
 import profits_obj_left from '../../assets/Profits_left_obj.svg'
 import profits_obj_right from '../../assets/Profits_right_obj.svg'
-import profits_obj_center from '../../assets/Profits_center_obj.svg'
+import profits_obj_center from '../../assets/Profits_center_obj.png'
 import gardens_logo from '../../assets/Sophias_Garden_logo.svg'
 
 export const Profits = () => {
