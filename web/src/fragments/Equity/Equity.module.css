@@ -22,14 +22,16 @@
 }
 
 .section_body{
+    height: 500px;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    align-content: center;
     gap: 3rem;
     padding-bottom: 70px;
     margin: 0 auto;
-    max-width: 1600px;
 }
 
 .section_title{
@@ -68,6 +70,18 @@
 @media screen and (max-width: 1198px) {
   .fragment {
     height: auto;
+  }
+  .section_body{
+    height: 860px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .fragment {
+    height: auto;
+  }
+  .section_body{
+    height: 1450px;
   }
 }
 
