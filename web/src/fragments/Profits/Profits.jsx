@@ -2,8 +2,9 @@ import React from 'react'
 import styles from './Profits.module.css'
 import profits_obj_left from '../../assets/Profits_left_obj.svg'
 import profits_obj_right from '../../assets/Profits_right_obj.svg'
-import profits_obj_center from '../../assets/Profits_center_obj.png'
+import profits_obj_center from '../../assets/Profits_center_obj_dots.png'
 import gardens_logo from '../../assets/Sophias_Garden_logo.svg'
+import logo from '../../assets/President_Club_logo.svg'
 
 export const Profits = () => {
   return (
@@ -36,6 +37,7 @@ export const Profits = () => {
 
                     <div className={styles.center_side}>
                         <img className={styles.center_obj} src={profits_obj_center} alt="Background" />
+                        <img className={styles.center_logo} src={logo} alt="Background" />
                         <h4 className={styles.center_title}>Limited Availability</h4>
                         <p className={styles.center_text}>
                             Only 35 Units
