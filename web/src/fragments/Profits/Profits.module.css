@@ -6,7 +6,7 @@
 }
 
 .fragment{
-    height: 100vh;
+    height: auto;
     background: linear-gradient(to bottom, white, transparent),
     url(../../assets/Profits_bg.png);
     background-size: cover;
@@ -43,6 +43,7 @@
 }
 
 .background_container{
+    height: 600px;
     position: relative;
 }
 
@@ -229,14 +230,26 @@
 }
 
 .center_obj{
+    background-color: #072733;
+    border-radius: 50%;
     max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.center_logo{
+    transform: translate(-50%, -50%);
+    top: 35%;
+    left: 50%;
+    position: absolute;
+    max-width: 100px;
 }
 
 .center_title{
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    margin-top: 60px;
+    margin-top: 40px;
     position: absolute;
     width: 200px;
     font-weight: 400;
@@ -250,7 +263,7 @@
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    margin-top: 90px;
+    margin-top: 80px;
     left: 50%;
     font-weight: 600;
     font-size: 20px;
@@ -260,129 +273,6 @@
     text-align: center;
     color: #FFFFFF;
 }
-
-@media screen and (max-height: 900px) {
-  /*.fragment {
-    height: 1000px;
-  }*/
-}
-
-/*@media screen and (max-width: 1280px) {
-    .top_left_obj,
-    .top_right_obj,
-    .bottom_left_obj,
-    .bottom_right_obj,
-    .center_obj{
-        max-width: 250px;
-    }
-
-    .top_left_title,
-    .top_right_title,
-    .bottom_left_title{
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 25px;
-    }
-
-    .top_left_text,
-    .top_right_text,
-    .bottom_left_text,
-    .bottom_right_text{
-        font-weight: 600;
-        font-size: 12px;
-        line-height: 20px;
-    }
-
-
-    .center_title{
-        margin-top: 40px;
-    }
-
-    .center_text{
-        margin-top: 70px;
-    }
-
-    .top_side{
-        padding-bottom: 250px;
-    }
-
-    .top_right_span{
-        font-size: 16px;
-    }
-
-    .center_side{
-        margin-top: 200px;
-    }
-
-    .bottom_right_side_body{
-        margin-right: 5%;
-    }
-
-    .bottom_side_body{
-        margin-left: 5%;
-    }
-
-    .top_side_body{
-        margin-left: 15%;
-    }
-
-    .top_right_side_body{
-        margin-right: 15%;
-    }
-
-    .bottom_left_title{
-        top: 90px;
-        left: 8rem;
-        width: 130px;
-    }
-
-    .bottom_left_text{
-        top: 155px;
-        left: 7.8rem;
-        width: 165px;
-    }
-
-    .bottom_right_title{
-        max-width: 200px;
-        top: 50px;
-        right: 1.5rem;
-    }
-
-    .bottom_right_text{
-        top: 115px;
-        right: 3rem;
-        width: 140px;
-    }
-
-    .top_left_title{
-        top: 75px;
-        left: 8.2rem;
-    }
-
-    .top_left_text{
-        top: 150px;
-        left: 8.2rem;
-        width: 150px;
-    }
-
-    .top_right_title{
-        top: 80px;
-        right: 3.2rem;
-    }
-
-    .top_right_text{
-        top: 100px;
-        right: 3rem;
-        width: 150px;
-    }
-
-    .bottom_right_image{
-        top: 50px;
-        right: 1.5rem;
-        max-width: 200px;
-    }
-}*/
 
 @media screen and (max-width: 1150px) {
     .fragment{
@@ -396,6 +286,10 @@
         flex-direction: column;
         margin: 0;
         padding: 0;
+    }
+    .background_container{
+        height: 1400px;
+        position: relative;
     }
     .bottom_side{
         flex-direction: column-reverse;
